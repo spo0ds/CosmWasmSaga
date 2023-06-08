@@ -1,0 +1,39 @@
+{
+  "useTemplate": true,
+  "template": "increment",
+  "name": "archway-simple-storage",
+  "developer": {
+    "archwayd": {
+      "docker": false
+    },
+    "deployments": []
+  },
+  "network": {
+    "name": "local",
+    "chainId": "local-1",
+    "type": "local",
+    "fees": {
+      "feeDenom": "uarch"
+    },
+    "gas": {
+      "prices": "0.002larch",
+      "mode": "auto",
+      "adjustment": "1.5"
+    },
+    "wasm": {
+      "bech32Hrp": "archway",
+      "archwayd": "0.1.0",
+      "configDir": ".archway",
+      "binary": "archwayd"
+    },
+    "urls": {
+      "rpc": {
+        "url": "tcp://localhost",
+        "port": 26657
+      },
+      "faucets": [
+        "http://localhost:8000"
+      ]
+    }
+  }
+}
